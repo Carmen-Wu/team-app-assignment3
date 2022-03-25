@@ -23,7 +23,13 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    //initialize the first box (if no cell)
+    if(numRows === 0  && numCols === 0){
+        var row = tableRef.insertRow(0);
+        row.appendChild(row.insertCell(0));
+        numRows++; //increase row counter
+        numCols++; //increase column counter
+      }
 }
 
 // Remove a row
