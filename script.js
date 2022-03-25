@@ -87,8 +87,13 @@ function fillU()
 }
 
 // Fill all cells
-function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+function fillAll()
+{
+  var td = document.querySelectorAll('td') //select all td elements
+  for (let cell of td) 
+  {
+      cell.style.backgroundColor = colorSelected; //loops through every element and changes the color to the colorSelected
+  }
 }
 
 // Clear all cells
