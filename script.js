@@ -68,6 +68,11 @@ function selectColor(){
     console.log(colorSelected);
 }
 
+//global event listener for the grid that checks whenever you click something on the grid.
+tableRef.addEventListener("click", function( event ) {
+  event.target.style.backgroundColor  = colorSelected; //whenever you click something on the grid, change that object thats been clicked to the selected color
+}, false); 
+
 // Fill all uncolored cells
 function fillU(){
     alert("Clicked Fill All Uncolored"); // Replace this line with your code.
