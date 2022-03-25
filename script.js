@@ -74,8 +74,16 @@ tableRef.addEventListener("click", function( event ) {
 }, false); 
 
 // Fill all uncolored cells
-function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+function fillU()
+{
+  var td = document.querySelectorAll('td') //select all td elements in the grid
+  for (let cell of td) //loops through every element
+    { 
+    if(cell.style.backgroundColor === "")
+      {
+      cell.style.backgroundColor = colorSelected; //if background color is empty, change the backgroundcolor to the colorSelected
+      }
+    }
 }
 
 // Fill all cells
