@@ -51,7 +51,15 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    if(numCols>0){ //check if theres at least one column 
+        for(let  i = 0; i < numRows; i++){ 
+          tableRef.rows[i].deleteCell(-1); //loops thru the rows and deletes each cell from the bottom
+        }
+        numCols--; // decrease column counter 
+        if(numCols === 0){ 
+          numRows =0; // if no columns, set numRows to initial state
+        }
+      }
 }
 
 // Set global variable for selected color
