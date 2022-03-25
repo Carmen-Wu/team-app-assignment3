@@ -97,6 +97,12 @@ function fillAll()
 }
 
 // Clear all cells
-function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+function clearAll()
+{
+  var td = document.querySelectorAll('td') //select all td elements
+  for (let cell of td) 
+  {
+      cell.style.backgroundColor = ""; //loops through every element and clears the color, make it empty
+  }
 }
+
