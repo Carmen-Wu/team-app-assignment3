@@ -2,6 +2,7 @@
 let numRows = 0;
 let numCols = 0;
 let colorSelected; 
+let tableRef = document.getElementById("grid"); //to reference the table in the index 
 
 // Add a row
 function addR() {
