@@ -40,7 +40,13 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    if(numRows>0){ //check if theres at least one row 
+        var row = tableRef.deleteRow(-1); //deletes a row
+        numRows--; //decrease row counter
+        if(numRows === 0){ 
+          numCols =0;//if no rows, set numCols to 0(initial state)
+        }
+      }
 }
 
 // Remove a column
