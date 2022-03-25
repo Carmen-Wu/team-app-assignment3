@@ -30,6 +30,12 @@ function addC() {
         numRows++; //increase row counter
         numCols++; //increase column counter
       }
+      else{ //if box is already initialized, then add column
+          for(let i = 0; i < numRows; i++){ //loop through each row
+              tableRef.rows[i].insertCell(-1) //add cell at the end of each row
+          }
+          numCols++; //increase column counter
+      }
 }
 
 // Remove a row
