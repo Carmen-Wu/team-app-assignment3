@@ -6,7 +6,19 @@ let tableRef = document.getElementById("grid"); //to reference the table in the 
 
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    if(numRows === 0  && numCols === 0){
+        var row = tableRef.insertRow(0);
+        row.appendChild(row.insertCell(0));
+        numRows++; //increase row counter
+        numCols++; //increase column counter
+      }
+      else{ //if box is already initialized, then add row
+        var row = tableRef.insertRow(-1); //insert row into last index 
+        for(let  i = 0; i < numCols; i++){ //loop thru each col
+          row.appendChild(row.insertCell(0)); //insert a cell for each column
+        }
+        numRows++; //increase row counter
+      }
 }
 
 // Add a column
